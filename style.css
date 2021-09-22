@@ -1,0 +1,33 @@
+/*=  COLORS*/
+
+.color-grey{
+    color: #5f6368;
+}
+
+/*= GENERALS */
+*{ 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+/*= BODY */
+/*? MAIN */
+ header{
+position: fixed;
+z-index: 1;
+background-color: #fff;
+} 
+
+main{
+  position: relative;
+  top: 114px;
+}

@@ -1,4 +1,5 @@
 <?php
+$header_links = ['Introduzione', 'Norme sulla privacy', 'Termini di servizio', 'Tecnologie', 'Domande frequenti',];
 $sections = [
     [
         'title' =>    "<h2 class=\"SbNcad\">Come state implementando la recente decisione della Corte di giustizia dell'Unione europea (CGUE) relativa al diritto all'oblio?</h2>",
@@ -39,7 +40,7 @@ $sections = [
         'title' =>    "<h2 class=\"SbNcad\">Quando faccio clic sui risultati della Ricerca Google, le mie chiavi di ricerca vengono inviate ai siti web?</h2>",
         'content' => "    <p>In alcuni casi sì. Quando fai clic su un risultato della Ricerca Google, il tuo browser web potrebbe reindirizzare alla pagina web di destinazione anche l'indirizzo Internet, o URL, della pagina dei risultati di ricerca sotto forma di <a href=\"privacy/key-terms#toc-terms-http\">URL referrer</a>. Talvolta, l'URL della pagina dei risultati di ricerca potrebbe contenere la query di ricerca che hai inserito. Se utilizzi la ricerca SSL (la funzione di ricerca criptata di Google), nella maggior parte dei casi i termini di ricerca non vengono inviati come parte dell'URL negli URL referrer. Questo comportamento può fare eccezione, ad esempio se utilizzi alcuni browser meno diffusi. Ulteriori informazioni sulla ricerca SSL sono disponibili <a href=\"https://support.google.com/websearch/answer/173733\">qui</a>. Le query di ricerca o le informazioni contenute nell'URL referrer potrebbero essere disponibili mediante Google Analytics o un'API (Application Programming Interface). Inoltre, gli inserzionisti potrebbero ricevere informazioni relative all' esatte parole chiave che hanno determinato il clic su un annuncio.</p>
 "
-    ]
+    ],
 ];
 ?>
 <!DOCTYPE html>
@@ -50,17 +51,25 @@ $sections = [
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.1/css/bootstrap.css' integrity='sha512-YfFXNd2o6swxA1M0ll6EDdnVdYdE6iz+C6k0Guqf18JW6sVq6Oz9lfbjOso+LMwwNYNxUbp7egkYmC2W/IyeVA==' crossorigin='anonymous' />
-    <link rel="stylesheet" href="./style.scss">
+    <link rel="stylesheet" href="./style.css">
 
     <title>Google faq</title>
 </head>
 
 <body>
-    <header class="container-fluid">
+    <header class="container-fluid border-bottom pt-3">
+        <nav class="row">
+            <h3 class="color-grey ms-3">Google Privacy e Termini</h3>
+            <ul class="col-12 d-flex m-0">
+                <?php foreach ($header_links as $link) { ?>
+                    <li class="me-3 p-3"><a class="color-grey fw-bold" href="#"><?php echo $link ?></a></li>
+                <?php } ?>
+            </ul>
+        </nav>
     </header>
     <main class="container">
         <?php foreach ($sections as $section) { ?>
-            <section class="row mt-5">
+            <section class="row pt-5">
                 <h2 class="col-12"><?= $section['title'] ?></h2>
                 <div class="col-12"><?= $section['content'] ?></div>
             </section>
