@@ -28,11 +28,15 @@ a{
 }
 
 /*= BODY */
+/*? HEADER */
+header{
+  position: fixed;
+  z-index: 1;
+  background-color: #fff;
+   }
 /*? MAIN */
- header{
-position: fixed;
-z-index: 1;
-background-color: #fff;
+main{
+   padding-top: 114px;
  }
 
  /*? FOOTER */
