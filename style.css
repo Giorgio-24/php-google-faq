@@ -4,6 +4,10 @@
     color: #5f6368;
 }
 
+.bg-color-light-grey{
+background-color: #eee;
+}
+
 /*= GENERALS */
 *{ 
   margin: 0;
@@ -19,15 +23,20 @@ a{
   text-decoration: none;
 }
 
+.font-10{
+  font-size: 10px; 
+}
+
 /*= BODY */
 /*? MAIN */
  header{
 position: fixed;
 z-index: 1;
 background-color: #fff;
-} 
+ }
 
-main{
-  position: relative;
-  top: 114px;
+ /*? FOOTER */
+ footer li:not(:first-child):before {
+  content: "\0000b7";
+  padding-right :5px;
 }

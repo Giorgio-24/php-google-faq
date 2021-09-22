@@ -42,6 +42,7 @@ $sections = [
 "
     ],
 ];
+$footer_links = ['Google', 'Tutto su Google', 'Privacy', 'Termini',];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -67,7 +68,7 @@ $sections = [
             </ul>
         </nav>
     </header>
-    <main class="container">
+    <main class="container mb-5">
         <?php foreach ($sections as $section) { ?>
             <section class="row pt-5">
                 <h2 class="col-12"><?= $section['title'] ?></h2>
@@ -75,7 +76,25 @@ $sections = [
             </section>
         <?php } ?>
     </main>
-    <footer class="container-fluid"></footer>
+    <footer class="bg-color-light-grey py-3">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-3">
+                    <ul class="d-flex m-0">
+                        <?php foreach ($footer_links as $link) { ?>
+                            <li class="me-2"><a class="color-grey font-10" href="#"><?php echo $link ?></a></li>
+                        <?php } ?>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <select class="pe-5" name="languages">
+                        <!-- NELLA REALTA' IL PADDING NON SERVE -->
+                        <option value="Italiano" selected>Italiano</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
